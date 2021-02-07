@@ -14,10 +14,10 @@ public class Source {
 
         switch (new Scanner(System.in).next()){
             case "1":
-                Calculator.userInterface();
+                Calculator.callUserInterface();
                 break;
             case "2":
-                WorksWithWords.userInterface();
+                WorksWithWords.callUserInterface();
                 break;
             default:
                 System.out.println("Вы сделали неправильный выбор. Прощайте.");

@@ -1,19 +1,19 @@
 import java.util.Scanner;
 
 public class Calculator {
-    private static String summationResultString(final double a1, final double a2) {
+    private static String getSummationResultString(final double a1, final double a2) {
         return String.format("%.4f", a1 + a2);
     }
 
-    private static String subtractionResultString(final double a1, final double a2) {
+    private static String getSubtractionResultString(final double a1, final double a2) {
         return String.format("%.4f", a1 - a2);
     }
 
-    private static String multiplicationResultString(final double a1, final double a2) {
+    private static String getMultiplicationResultString(final double a1, final double a2) {
         return String.format("%.4f", a1 * a2);
     }
 
-    private static String divisionResultString(final double a1, final double a2) {
+    private static String getDivisionResultString(final double a1, final double a2) {
         if (a2 != 0.0) return String.format("%.4f", a1 / a2);
         else {
             if (a1 > 0.0) return "+inf";
@@ -22,7 +22,7 @@ public class Calculator {
         }
     }
 
-    public static void userInterface() {
+    public static void callUserInterface() {
         final double NUMBER_1, NUMBER_2;
         final String OPERATION;
 
@@ -57,16 +57,16 @@ public class Calculator {
 
         switch(OPERATION){
             case "1":
-                System.out.println(summationResultString(NUMBER_1, NUMBER_2));
+                System.out.println(getSummationResultString(NUMBER_1, NUMBER_2));
                 break;
             case "2":
-                System.out.println(subtractionResultString(NUMBER_1, NUMBER_2));
+                System.out.println(getSubtractionResultString(NUMBER_1, NUMBER_2));
                 break;
             case "3":
-                System.out.println(multiplicationResultString(NUMBER_1, NUMBER_2));
+                System.out.println(getMultiplicationResultString(NUMBER_1, NUMBER_2));
                 break;
             case "4":
-                System.out.println(divisionResultString(NUMBER_1, NUMBER_2));
+                System.out.println(getDivisionResultString(NUMBER_1, NUMBER_2));
                 break;
             default:
                 System.out.println("Некорректный номер операции.");

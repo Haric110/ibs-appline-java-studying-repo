@@ -6,7 +6,7 @@ public class WorksWithWords {
      * и выводит наиболее длинное из них.
      * Если в строке ввода есть несколько слов, читается только первое из них.
      */
-    public static void userInterface() {
+    public static void callUserInterface() {
         final int WORDS_COUNT;
 
         int max_length, indexOfTheLongestWord;
