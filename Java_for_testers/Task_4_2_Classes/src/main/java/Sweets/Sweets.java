@@ -1,29 +1,48 @@
 package Sweets;
 
 public class Sweets {
-    private String name;
-    private double price;
+    protected String brand;
+    protected int weightInGrams;
+    protected double price;
 
     public Sweets() {}
 
-    public Sweets(String name, double price) {
-        this.name = name;
+    public Sweets(String brand, int weightInGrams, double price) {
+        this.brand = brand;
+        this.weightInGrams = weightInGrams;
         this.price = price;
     }
 
-    public String getName() {
-        return name;
+    public String getBrand() {
+        return brand;
+    }
+
+    public int getWeightInGrams() {
+        return weightInGrams;
     }
 
     public double getPrice() {
         return price;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public void setWeightInGrams(int weightInGrams) {
+        this.weightInGrams = weightInGrams;
     }
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Sweets{" +
+                "brand='" + brand + '\'' +
+                ", weightInGrams=" + weightInGrams +
+                ", price=" + price +
+                '}';
     }
 }
