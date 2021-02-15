@@ -1,29 +1,29 @@
 package Sweets;
 
 public class Chocolate extends Sweets {
-    private String type;
+    private double percentOfCocoa;
 
 
-    public Chocolate(String brand, double price, int weightInGrams, String type) {
+    public Chocolate(String brand, double price, int weightInGrams, double percentOfCocoa) {
         super(brand, weightInGrams, price);
-        this.type = type;
+        this.percentOfCocoa = percentOfCocoa;
     }
 
-    public String getType() {
-        return type;
+    public double getPercentOfCocoa() {
+        return percentOfCocoa;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setPercentOfCocoa(double percentOfCocoa) {
+        this.percentOfCocoa = percentOfCocoa;
     }
 
     @Override
     public String toString() {
         return "Chocolate{" +
-                "brand ='" + getBrand() + '\'' +
-                ", price =" + getPrice() +
-                ", type='" + type + '\'' +
-                ", weightInGrams=" + getWeightInGrams() +
+                "brand ='" + brand + '\'' +
+                ", price =" + price +
+                ", percentOfCocoa=" + percentOfCocoa +
+                ", weightInGrams=" + weightInGrams +
                 '}';
     }
 }
