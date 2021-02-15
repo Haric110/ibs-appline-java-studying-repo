@@ -19,9 +19,10 @@ public class Cookies extends Sweets{
     @Override
     public String toString() {
         return "Cookies{" +
-                "brand ='" + brand + '\'' +
-                ", price =" + price +
-                ", type='" + type + '\'' +
+                "brand = '" + brand + '\'' +
+                ", price = " + price +
+                ", weightInGrams = " + weightInGrams +
+                ", type= '" + type + '\'' +
                 '}';
     }
 }

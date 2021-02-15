@@ -20,10 +20,10 @@ public class Chocolate extends Sweets {
     @Override
     public String toString() {
         return "Chocolate{" +
-                "brand ='" + brand + '\'' +
-                ", price =" + price +
-                ", percentOfCocoa=" + percentOfCocoa +
-                ", weightInGrams=" + weightInGrams +
+                "brand = '" + brand + '\'' +
+                ", price = " + price +
+                ", weightInGrams = " + weightInGrams +
+                ", percentOfCocoa = " + percentOfCocoa +
                 '}';
     }
 }

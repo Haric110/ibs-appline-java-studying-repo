@@ -14,14 +14,14 @@ public class Source {
         Chocolate alpenGold = new Chocolate(
                 "Alpen Gold",
                 299.99,
-                95,
+                195,
                 0.85);
         gift.add(alpenGold);
 
         Chocolate babaevsky = new Chocolate(
                 "Бабаевский",
                 259.99,
-                90,
+                190,
                 0.75);
         gift.add(babaevsky);
 
@@ -32,9 +32,13 @@ public class Source {
                 "shortbread");
         gift.add(someCookies);
 
+        System.out.println("The gift content: ");
+
         for (Sweets giftEntry : gift) {
             giftTotalWight += giftEntry.getWeightInGrams();
             giftTotalPrice += giftEntry.getPrice();
+
+            System.out.println(giftEntry.toString());
         }
 
         System.out.printf("Weight of the gift: %d g\n", giftTotalWight);
