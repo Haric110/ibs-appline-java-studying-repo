@@ -1,5 +1,7 @@
 package Sweets;
 
+import java.util.Locale;
+
 public class Cookies extends Sweets{
     private String type;
 
@@ -20,7 +22,7 @@ public class Cookies extends Sweets{
     public String toString() {
         return "Cookies{" +
                 "brand = '" + brand + '\'' +
-                ", price = " + price +
+                String.format(Locale.UK,", price = %.2f", price) +
                 ", weightInGrams = " + weightInGrams +
                 ", type= '" + type + '\'' +
                 '}';
