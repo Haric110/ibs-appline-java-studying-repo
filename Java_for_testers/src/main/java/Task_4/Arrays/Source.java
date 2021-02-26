@@ -1,3 +1,5 @@
+package Task_4.Arrays;
+
 import java.util.Random;
 
 public class Source {

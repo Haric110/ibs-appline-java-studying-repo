@@ -1,6 +1,8 @@
-import Sweets.Sweets;
-import Sweets.Chocolate;
-import Sweets.Cookies;
+package Task_4.Classes;
+
+import Task_4.Classes.Sweets.Sweets;
+import Task_4.Classes.Sweets.Chocolate;
+import Task_4.Classes.Sweets.Cookies;
 
 import java.util.ArrayList;
 

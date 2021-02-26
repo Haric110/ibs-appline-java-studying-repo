@@ -1,4 +1,4 @@
-package Sweets;
+package Task_4.Classes.Sweets;
 
 import java.util.Locale;
 

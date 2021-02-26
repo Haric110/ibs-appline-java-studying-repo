@@ -1,3 +1,5 @@
+package Task_3;
+
 import java.util.Scanner;
 
 public class Calculator {
@@ -55,21 +57,12 @@ public class Calculator {
 
         System.out.print("Результат операции: ");
 
-        switch(OPERATION){
-            case "1":
-                System.out.println(getSummationResultString(NUMBER_1, NUMBER_2));
-                break;
-            case "2":
-                System.out.println(getSubtractionResultString(NUMBER_1, NUMBER_2));
-                break;
-            case "3":
-                System.out.println(getMultiplicationResultString(NUMBER_1, NUMBER_2));
-                break;
-            case "4":
-                System.out.println(getDivisionResultString(NUMBER_1, NUMBER_2));
-                break;
-            default:
-                System.out.println("Некорректный номер операции.");
+        switch (OPERATION) {
+            case "1" -> System.out.println(getSummationResultString(NUMBER_1, NUMBER_2));
+            case "2" -> System.out.println(getSubtractionResultString(NUMBER_1, NUMBER_2));
+            case "3" -> System.out.println(getMultiplicationResultString(NUMBER_1, NUMBER_2));
+            case "4" -> System.out.println(getDivisionResultString(NUMBER_1, NUMBER_2));
+            default -> System.out.println("Некорректный номер операции.");
         }
 
         System.out.println("""

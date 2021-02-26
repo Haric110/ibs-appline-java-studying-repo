@@ -1,4 +1,4 @@
-package Sweets;
+package Task_4.Classes.Sweets;
 
 public class Chocolate extends Sweets {
     private double percentOfCocoa;

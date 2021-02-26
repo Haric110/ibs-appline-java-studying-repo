@@ -1,3 +1,5 @@
+package Task_3;
+
 import java.util.Scanner;
 
 public class Source {
@@ -12,15 +14,10 @@ public class Source {
 
         System.out.print("И так, Ваш выбор: ");
 
-        switch (new Scanner(System.in).next()){
-            case "1":
-                Calculator.callUserInterface();
-                break;
-            case "2":
-                WorksWithWords.callUserInterface();
-                break;
-            default:
-                System.out.println("Вы сделали неправильный выбор. Прощайте.");
+        switch (new Scanner(System.in).next()) {
+            case "1" -> Calculator.callUserInterface();
+            case "2" -> WorksWithWords.callUserInterface();
+            default -> System.out.println("Вы сделали неправильный выбор. Прощайте.");
         }
     }
 }

@@ -1,3 +1,5 @@
+package Task_2_Calculator;
+
 import java.util.Scanner;
 
 public class Source {

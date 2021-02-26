@@ -1,4 +1,4 @@
-package Sweets;
+package Task_4.Classes.Sweets;
 
 public class Sweets {
     protected String brand;
@@ -39,7 +39,7 @@ public class Sweets {
 
     @Override
     public String toString() {
-        return "Sweets{" +
+        return "Task_4.Classes.Sweets{" +
                 "brand='" + brand + '\'' +
                 ", weightInGrams=" + weightInGrams +
                 ", price=" + price +
