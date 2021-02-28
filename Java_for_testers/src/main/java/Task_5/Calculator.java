@@ -11,55 +11,80 @@ public class Calculator {
     private double result = 0;
     private base angleBase = base.rad;
 
-    public Calculator(double result) {
-        this.result = result;
+    public Calculator(double initialValue) {
+        this.result = initialValue;
     }
 
-    public Calculator(double result, base angleBase) {
-        this.result = result;
+    public Calculator(double initialValue, base angleBase) {
+        this.result = initialValue;
         this.angleBase = angleBase;
     }
 
     public Calculator() {}
 
-    public void initialize(double arg){
+    /**
+     * Инициализирует начальное значение. Левый аргумент для последующих операторов.
+     * @param arg первичный аргумент
+     * @return возвращает цепочку вычислений после выполнения операции
+     */
+    public Calculator initialize(double arg){
         this.result = arg;
+        return this;
     }
 
     /**
      * Прибавляет правый аргумент к результату вычислений.
      *
      * @param rArg правый аргумент
+     * @return возвращает цепочку вычислений после выполнения операции
      */
-    public void add(double rArg) {
+    public Calculator add(double rArg) {
         this.result += rArg;
+        return this;
     }
 
     /**
      * Вычитает правый аргумент из промежуточного результата.
      *
      * @param rArg правый аргумент
+     * @return возвращает цепочку вычислений после выполнения операции
      */
-    public void sub(double rArg) {
+    public Calculator sub(double rArg) {
         this.result -= rArg;
+        return this;
     }
 
     /**
      * Выполняет деление результата вычислений на правый аргумент.
      *
      * @param rArg правый аргумент
+     * @return возвращает цепочку вычислений после выполнения операции
      */
-    public void div(double rArg) {
+    public Calculator div(double rArg) {
         this.result /= rArg;
+        return this;
     }
 
     /**
      * Выполняет умножение результата цепочки вычислений на правый аргумент.
      *
      * @param rArg правый аргумент
+     * @return возвращает цепочку вычислений после выполнения операции
      */
-    public void mul(double rArg) {
+    public Calculator mul(double rArg) {
         this.result *= rArg;
+        return this;
+    }
+
+    /**
+     * Возвращает число e (число Эйлера), возведённое в степень текущего результата цепочки вычислений.
+     * Использует Math.pow().
+     *
+     * @return возвращает цепочку вычислений после выполнения операции
+     */
+    public Calculator exp() {
+        this.result = Math.pow(E, this.result);
+        return this;
     }
 
     public double getResult() {
@@ -68,14 +93,6 @@ public class Calculator {
 
 
 
-
-    /**
-     * Возвращает число e (число Эйлера), возведённое в степень текущего результата цепочки вычислений.
-     *
-     */
-    public void exp() {
-        this.result = Math.pow(E, this.result);
-    }
 
     public static double pow(double base, int degree) {
         if (degree == 0) return 1.0;
