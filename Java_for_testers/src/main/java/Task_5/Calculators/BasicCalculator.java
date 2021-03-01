@@ -1,21 +1,21 @@
 package Task_5.Calculators;
 
-public class Calculator {
+public class BasicCalculator {
 
     protected double result = 0;
 
-    public Calculator(double initialValue) {
+    public BasicCalculator(final double initialValue) {
         this.result = initialValue;
     }
 
-    public Calculator() {}
+    public BasicCalculator() {}
 
     /**
      * Инициализирует начальное значение. Левый аргумент для последующих операторов.
      * @param arg первичный аргумент
      * @return возвращает цепочку вычислений после выполнения операции
      */
-    public Calculator initialize(double arg){
+    public BasicCalculator initialize(final double arg){
         this.result = arg;
         return this;
     }
@@ -23,44 +23,44 @@ public class Calculator {
     /**
      * Прибавляет правый аргумент к результату вычислений.
      *
-     * @param rArg правый аргумент
+     * @param R_ARG правый аргумент
      * @return возвращает цепочку вычислений после выполнения операции
      */
-    public Calculator add(double rArg) {
-        this.result += rArg;
+    public BasicCalculator add(final double R_ARG) {
+        this.result += R_ARG;
         return this;
     }
 
     /**
      * Вычитает правый аргумент из промежуточного результата.
      *
-     * @param rArg правый аргумент
+     * @param R_ARG правый аргумент
      * @return возвращает цепочку вычислений после выполнения операции
      */
-    public Calculator sub(double rArg) {
-        this.result -= rArg;
+    public BasicCalculator sub(final double R_ARG) {
+        this.result -= R_ARG;
         return this;
     }
 
     /**
      * Выполняет деление результата вычислений на правый аргумент.
      *
-     * @param rArg правый аргумент
+     * @param R_ARG правый аргумент
      * @return возвращает цепочку вычислений после выполнения операции
      */
-    public Calculator div(double rArg) {
-        this.result /= rArg;
+    public BasicCalculator div(final double R_ARG) {
+        this.result /= R_ARG;
         return this;
     }
 
     /**
      * Выполняет умножение результата цепочки вычислений на правый аргумент.
      *
-     * @param rArg правый аргумент
+     * @param R_ARG правый аргумент
      * @return возвращает цепочку вычислений после выполнения операции
      */
-    public Calculator mul(double rArg) {
-        this.result *= rArg;
+    public BasicCalculator mul(final double R_ARG) {
+        this.result *= R_ARG;
         return this;
     }
 
