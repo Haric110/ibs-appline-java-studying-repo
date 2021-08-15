@@ -11,7 +11,7 @@ public class Source {
     public static void main(String[] args) {
         final String
                 pathSeparator = System.getProperty("os.name").startsWith("Windows") ? "\\" : "/",
-                filePath = System.getProperty("user.dir") + pathSeparator + "src" + pathSeparator +
+                filePath = System.getProperty("user.dir") + pathSeparator + "Java_for_testers" + pathSeparator + "src" + pathSeparator +
                         "main" + pathSeparator + "java" + pathSeparator + "Task_6_Collections" + pathSeparator
                         + "input_path" + pathSeparator + "input.txt";
 
