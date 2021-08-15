@@ -48,9 +48,9 @@ public class BasicCalculator {
      * @param R_ARG правый аргумент
      * @return возвращает цепочку вычислений после выполнения операции
      */
-    public BasicCalculator div(final double R_ARG) throws IllegalAccessException {
+    public BasicCalculator div(final double R_ARG) throws IllegalArgumentException {
         if(R_ARG == 0) {
-            throw new IllegalAccessException("Деление на 0 недопустимо.");
+            throw new IllegalArgumentException("Деление на 0 недопустимо.");
         }
         this.result /= R_ARG;
         return this;
@@ -67,6 +67,10 @@ public class BasicCalculator {
         return this;
     }
 
+    /**
+     *
+     * @return Возвращает текущий результат вычислений цепочки
+     */
     public double getResult() {
         return this.result;
     }

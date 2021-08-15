@@ -13,7 +13,7 @@ public class Source {
                             new AdvancedCalculator(1).exp().sub(1).getResult());
 
             System.out.printf("Результаты вычислений: %.6f\n", calculator.getResult());
-        } catch (IllegalAccessException e) {
+        } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }
 
@@ -25,7 +25,7 @@ public class Source {
                             new AdvancedCalculator(1).exp().sub(1).getResult());
 
             System.out.printf("Результаты вычислений: %.6f\n", calculator.getResult());
-        } catch (IllegalAccessException e) {
+        } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }
 
@@ -37,7 +37,7 @@ public class Source {
             calc2.tan(AdvancedCalculator.AngleBase.rad).add(1);
 
             System.out.printf("Результаты вычислений: %.6f\n", calc2.getResult());
-        } catch (IllegalAccessException e) {
+        } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }
 
