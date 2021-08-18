@@ -121,7 +121,7 @@ public class CalculatorTests {
         }
     }
 
-    @Test
+    /*@Test
     public void testDivisionByZero() {
         Random random = new Random();
         BasicCalculator bc = new BasicCalculator();
@@ -137,5 +137,24 @@ public class CalculatorTests {
                 () -> bc.div(0) );
 
         Assert.assertTrue(thrownException.getMessage().contains("Деление на 0 недопустимо."));
+    }*/
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testDivisionByZero2() {
+        Random random = new Random();
+        BasicCalculator bc = new BasicCalculator();
+
+        double
+                initial = 1e-4 + random.nextDouble() * 1e+4;
+
+        bc.initialize(initial);
+
+        try {
+            bc.div(0);
+        } catch (IllegalArgumentException e) {
+            Assert.assertEquals("Деление на 0 недопустимо.", e.getMessage());
+            throw e;
+        }
+        Assert.fail("Expected exception does not thrown.");
     }
 }
