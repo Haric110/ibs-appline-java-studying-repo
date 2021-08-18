@@ -50,7 +50,11 @@ public class BasicCalculator {
      */
     public BasicCalculator div(final double R_ARG) throws IllegalArgumentException {
         if(R_ARG == 0) {
-            throw new IllegalArgumentException("Деление на 0 недопустимо.");
+            if (result == 0) throw new IllegalArgumentException("NaN");
+            else{
+                if(result > 0) throw new IllegalArgumentException("+inf");
+                else throw new IllegalArgumentException("-inf");
+            }
         }
         this.result /= R_ARG;
         return this;

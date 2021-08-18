@@ -140,21 +140,51 @@ public class CalculatorTests {
     }*/
 
     @Test(expected = IllegalArgumentException.class)
-    public void testDivisionByZero2() {
+    public void testDivisionPositiveByZero() {
         Random random = new Random();
         BasicCalculator bc = new BasicCalculator();
-
-        double
-                initial = 1e-4 + random.nextDouble() * 1e+4;
+        // Положительное число
+        double initial = 1e-4 + random.nextDouble() * 1e+4;
 
         bc.initialize(initial);
 
         try {
             bc.div(0);
         } catch (IllegalArgumentException e) {
-            Assert.assertEquals("Деление на 0 недопустимо.", e.getMessage());
+            Assert.assertEquals("+inf", e.getMessage());
             throw e;
         }
-        Assert.fail("Ожидалось исключение IllegalArgumentException, но его нет.");
+        Assert.fail("Ожидалось исключение IllegalArgumentException +inf, но его нет.");
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testDivisionNegativeByZero() {
+        Random random = new Random();
+        BasicCalculator bc = new BasicCalculator();
+        // Отрицательное число
+        double initial = -1e-4 - random.nextDouble() * 1e+4;
+
+        bc.initialize(initial);
+
+        try {
+            bc.div(0);
+        } catch (IllegalArgumentException e) {
+            Assert.assertEquals("-inf", e.getMessage());
+            throw e;
+        }
+        Assert.fail("Ожидалось исключение IllegalArgumentException -inf, но его нет.");
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testDivisionZeroByZero() {
+        BasicCalculator bc = new BasicCalculator();
+
+        try {
+            bc.div(0);
+        } catch (IllegalArgumentException e) {
+            Assert.assertEquals("NaN", e.getMessage());
+            throw e;
+        }
+        Assert.fail("Ожидалось исключение IllegalArgumentException NaN, но его нет.");
     }
 }
