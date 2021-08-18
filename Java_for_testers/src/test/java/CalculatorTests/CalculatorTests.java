@@ -155,6 +155,6 @@ public class CalculatorTests {
             Assert.assertEquals("Деление на 0 недопустимо.", e.getMessage());
             throw e;
         }
-        Assert.fail("Ожидалось исклюючение IllegalОжидалось исключение IllegalArgumentException, но его нет.");
+        Assert.fail("Ожидалось исключение IllegalArgumentException, но его нет.");
     }
 }
